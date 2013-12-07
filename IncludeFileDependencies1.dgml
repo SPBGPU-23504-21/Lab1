@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @7)" Category="CodeSchema_ProjectItem" Bounds="129.892033020691,-2.3748238220378E-06,105.358899847783,45.0022331811163" FilePath="$(VsSolution)\lab1\main.cpp" Group="Expanded" Label="main.cpp" UseManualLocation="True" />
+    <Node Id="@2" Category="CodeSchema_PoundIncludeFile" Bounds="-23.1074166775332,-41.0023355559401,278.358349546007,184.008797355238" FilePath="$(VsSolution)\lab1\lab1.vcxproj" Group="Expanded" Label="lab1.vcxproj" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@4" Category="CodeSchema_ProjectItem" Bounds="-3.1074162655926,9.00223081816662,86.9422331811163,26.0022331811163" FilePath="$(VsSolution)\lab1\part1.cpp" Label="part1.cpp" UseManualLocation="True" />
+    <Node Id="@6" Category="CodeSchema_ProjectItem" Bounds="5.32035055329111,97.0041272958141,94.5722331811163,26.0022331811163" FilePath="$(VsSolution)\lab1\source.cpp" Label="Source.cpp" />
+  </Nodes>
+  <Links>
+    <Link Source="@2" Target="(@1 @7)" Category="Contains" />
+    <Link Source="@2" Target="@4" Category="Contains" />
+    <Link Source="@2" Target="@6" Category="Contains" />
+    <Link Source="@6" Target="@4" Bounds="43.4125379439103,43.9186137933757,7.38522316074209,53.0855148248064" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_PoundIncludeFile" Label="C++ Project File" BasedOn="File" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="C++ Project File" />
+    <Category Id="CodeSchema_ProjectItem" Label="Project Item" BasedOn="File" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="File" NavigationActionLabel="Project Items" />
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FilePath" Label="File Path" Description="File Path" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Language" Label="Language" Description="Language" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="File" Label="File" ValueType="Uri" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(VsSolutionUri)/Lab1/Lab1.vcxproj" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Uri="File=$(VsSolutionUri)/Lab1/Part1.cpp" />
+    <Alias n="4" Id="(@1 @3)" />
+    <Alias n="5" Uri="File=$(VsSolutionUri)/Lab1/Source.cpp" />
+    <Alias n="6" Id="(@1 @5)" />
+    <Alias n="7" Uri="File=$(VsSolutionUri)/Lab1/main.cpp" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="C++ Project File" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_PoundIncludeFile')" />
+      <Setter Property="Background" Value="#FFEFEFEF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FFA08080" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Source File" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_ProjectItem')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="#include Group" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_PoundIncludeGroup')" />
+      <Setter Property="Background" Value="#FFEFEFEF" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="VsSolution" Value="C:\Users\poriesto\Documents\Visual Studio 2012\Projects\Lab1" />
+    <Path Id="VsSolutionUri" Value="file:///C:/Users/poriesto/Documents/Visual Studio 2012/Projects/Lab1" />
+  </Paths>
+</DirectedGraph>
